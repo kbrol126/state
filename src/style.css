@@ -1,0 +1,8 @@
+*{box-sizing: border-box;
+margin: 0;}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #9ccc65;
+}
+

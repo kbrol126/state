@@ -23,13 +23,20 @@ const state = {
     this.setState(cs);
     console.log(cs);
   },
-  removeItem(item: string) {
-    console.log("soy el item que recibo del main " + item);
+  removeItem(string: string) {
+    console.log("soy el string que recibo del main " + string);
     const cs = state.getState();
-    const resultado = cs.list.filter((i) => {
-      return i !== item;
+    // const resultado = cs.list.filter((i) => {
+    //   return i !== string;
+    // });
+
+    //console.log(resultado)
+    // this.setState(cs);
+    cs.list.filter((i) => {
+      return i !== string;
     });
-    console.log(resultado);
+
+    console.log(cs.list);
   },
 };
 

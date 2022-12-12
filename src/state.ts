@@ -23,6 +23,13 @@ const state = {
     this.setState(cs);
     console.log(cs);
   },
+  removeItem(item: string) {
+    console.log("soy el item que recibo del main" + item, typeof item);
+    const cs = state.getState();
+    console.log("soy el console del remove  " + cs.list);
+    const nuevo = state.getState().list.filter((items) => items != item);
+    console.log("soy nuevo" + nuevo);
+  },
 };
 
 export { state };

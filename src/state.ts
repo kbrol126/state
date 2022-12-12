@@ -24,11 +24,12 @@ const state = {
     console.log(cs);
   },
   removeItem(item: string) {
-    console.log("soy el item que recibo del main" + item, typeof item);
+    console.log("soy el item que recibo del main " + item);
     const cs = state.getState();
-    console.log("soy el console del remove  " + cs.list);
-    const nuevo = state.getState().list.filter((items) => items != item);
-    console.log("soy nuevo" + nuevo);
+    const resultado = cs.list.filter((i) => {
+      return i !== item;
+    });
+    console.log(resultado);
   },
 };
 
